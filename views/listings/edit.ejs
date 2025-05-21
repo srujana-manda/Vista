@@ -1,0 +1,86 @@
+<% layout("layouts/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2 mt-3">
+
+    <h3>Edit Listing</h3>
+    <br>
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]" value="<%= listing.title %>" class="form-control"  type="text" required>
+            <div class="invalid-feedback"> Please Enter Title.</div>
+
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">description</label>
+            <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea>
+            <div class="invalid-feedback"> Please Enter description.
+    
+       </div>
+       <div class="mb-3 dropdown mt-3 category">              
+        <input name="listing[category]" id="categoryInput"  placeholder="Select Category"  class="form-control" type="hidden" >
+            <label for="category" class="form-label">Category:</label>
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+            Select
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Mountains</a></li>
+                <li><a class="dropdown-item" href="#">Arctic</a></li>
+                <li><a class="dropdown-item" href="#">Rooms</a></li>
+                <li><a class="dropdown-item" href="#">Farms</a></li>
+                <li><a class="dropdown-item" href="#">Trending</a></li>
+                <li><a class="dropdown-item" href="#">Iconic Cities</a></li>
+                <li><a class="dropdown-item" href="#">Castles</a></li>
+                <li><a class="dropdown-item" href="#">Camping</a></li>
+                <li><a class="dropdown-item" href="#">Amazing Pools</a></li>
+                <li><a class="dropdown-item" href="#">OBeach</a></li>
+                <li><a class="dropdown-item" href="#">Other</a></li>
+
+            </ul>
+          
+    </div>
+
+          
+        </div>
+        <div class="mb-3">
+            <h5>Original Image</h5>
+          <img src="<%=  originalImg %> " class="Oimg"><br>
+
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload New Image</label>
+            <input name="listing[image]"  class="form-control" type="file">
+            <div class="invalid-feedback"> Please Enter Image.</div>
+
+        <div class="row">
+
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input name="listing[price]" value="<%= listing.price%>"  class="form-control" type="number" required>
+                <div class="invalid-feedback"> Please Enter price.</div>
+
+            </div>
+
+            <div class="mb-3 col-md-8">
+                <label for="country" class="form-label">Country</label>
+                <input name="listing[country]"value="<%= listing.country %>"  class="form-control" type="text" required>
+                <div class="invalid-feedback"> Please Enter country.</div>
+
+            </div>
+        </div>
+
+       
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input name="listing[location]" value="<%= listing.location %>" class="form-control" type="text" required>
+            <div class="invalid-feedback"> Please Enter location.</div>
+
+        </div>
+       
+        <button class="btn btn-dark edit-btn mt-2">Edit</button><br>
+
+    </form>
+</div>
+</div>
+<script src="/js/dropdown.js"></script>
+
