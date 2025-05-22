@@ -100,6 +100,10 @@ app.use("/listings/:id/reviews", reviewRouter);
 //Route for users
 app.use("/",userRouter);
 
+app.get("/", (req, res) => {
+    res.render("listings/landing.ejs");
+  });
+
 
 app.all(/.*/,(req,res,next)=>{
    next(new ExpressError(404,"page not found"));
