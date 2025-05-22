@@ -1,62 +1,4 @@
-<style>
-  .search-btn{
-    background-color: #fe424d;
-    color: white;
-    border-radius: 25px;
-    padding: 0 1rem 0 1rem;
-  }
-  .search-btn:hover{
-    background-color: #fe424d;
-    color: white;
-  }
-  .search-btn i{
-    display: inline;
-    margin-right: 0.5rem;
-  }
-  .search-input{
-    border-radius: 25px;
-    padding: 0.5rem 3rem 0.5rem 3rem;
-    font-size: 1rem;
-  }
-
-
-  @media (max-width: 767.98px) {
-    @media (max-width: 767.98px) {
-    .navbar-collapse {
-      background: #fff;
-      color:white;
-      padding: 1rem;
-      border-radius: 0 0 10px 10px;
-    }
-
-    .navbar-collapse .nav-link {
-      padding: 0.5rem 1rem;
-      color: #000;
-      font-weight: 500;
-    }
-
-    .navbar-collapse form {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      align-items: center;
-      justify-content: start;
-    }
-
-    .navbar-collapse input.form-control {
-      flex: 1 1 60%;
-      min-width: 150px;
-    }
-
-    .navbar-collapse .btn {
-      flex: 1 1 auto;
-      white-space: nowrap;
-      padding: 0.5rem;;
-    }
-  }
-}
-</style>
-
+<link rel="stylesheet" href="/css/styles.css">
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
@@ -83,7 +25,7 @@
 
              <!-- Right -->
         <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+          <a class="nav-link" href="/listings/new">Become a Host</a>
           <% if(!currUser) { %>
           <a class="nav-link "  href="/signup"><b>Sign up</b></a>
           <a class="nav-link" href="/login"><b>Login</b></a>
