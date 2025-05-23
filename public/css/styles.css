@@ -151,13 +151,19 @@ hr{
     height: 100px;   
 }
 
+
 /* map */
 
 #map { 
-    height: 400px;
-    width:80vh;
+
     border-radius: 1rem;
     border: 1px solid gray;
+}
+
+.responsive-map{
+  width:100%;
+  max-width: 500px;
+  height: 300px;
 }
 
 /* gst */
@@ -319,6 +325,10 @@ filter */
     color: #444;
   }
   
+  .responsive-map{
+    width: 800px;
+
+  }
   
 
 
@@ -381,6 +391,10 @@ filter */
       color:white;
       padding: 1rem;
       border-radius: 0 0 10px 10px;
+    }
+
+    .responsive-map{
+      height: 250px; width: 250px; margin: 0 auto;
     }
 
     .navbar-collapse .nav-link {
