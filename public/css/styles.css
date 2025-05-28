@@ -107,6 +107,11 @@ hr{
 .listing-link{
     text-decoration: none;
 }
+.listing-img{
+  width:500px;
+  height:300px;
+  object-fit: cover;
+}
 
 /* category */
 .category{
@@ -402,6 +407,13 @@ filter */
       color: #000;
       font-weight: 500;
     }
+
+    .listing-img{
+      width:250px;
+      height:200px;
+      object-fit: cover;
+    }
+    
 
     .navbar-collapse form {
       display: flex;
